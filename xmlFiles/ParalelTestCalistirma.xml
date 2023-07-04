@@ -1,0 +1,33 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="planli paralel calistirma" thread-count="2" parallel="tests">
+
+    <test name="test1">
+    <!--
+       tests bazinda bölüsüm
+       framework'de sizin istediginiz ve uygun gördügünüz sekilde
+       bir bölüsümü saglar
+
+       her bir browser sizin birlikte calistirilmasini uygun gördügünüz
+       package, class veya method'lari calistirir
+
+       bu sekilde bir paylasim ile
+       hem browser'larin mümkün oldugunca esit görev almasini saglayip
+       hem de birbirine bagimli testlerin ayni browser tarafindan calistirilmasini
+       saglayabilirsiniz
+    -->
+        <classes>
+            <class name="tests.day15_POM.C05_QualitydemyLogin"></class>
+            <class name="tests.day15_POM.C06_QualitydemyNegativeLoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="test2">
+
+        <classes>
+            <class name="tests.day16_POM_Assertions.C03_SoftAssertion"></class>
+
+        </classes>
+    </test>
+</suite>
